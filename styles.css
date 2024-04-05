@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.welcome-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.welcome-box h1 {
+    margin: 0;
+    color: red; /* Establecer color rojo */
+}
+
+.rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7; /* Opacidad para la lluvia */
+}
+
+.rain {
+    position: absolute;
+    width: 60px; /* Ancho de la imagen */
+    height: 60px; /* Alto de la imagen */
+    background-image: url('imagen2.png'); /* URL de la imagen */
+    background-size: cover;
+    animation: falling 4s linear infinite; /* Duración de la animación */
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
